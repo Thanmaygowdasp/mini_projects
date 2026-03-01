@@ -192,7 +192,7 @@ h1{
 #youtube a{
     position: absolute;
     top: 80%;
-    display: flex;
+    display: fl;
     border: none;
     text-decoration: none;
     font-size: 15px;
