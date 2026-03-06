@@ -1,6 +1,8 @@
 body{
     margin: 0;
     padding: 0;
+    background: linear-gradient(45deg , #d9ff00, #00ff08), no-repeat;
+    width: 100%;
 }
 h1{
     display: flex;
@@ -175,6 +177,10 @@ h1{
         margin-left: 20px;
         width: 20%;
         margin-top: 10px;
+    }
+    #maxchancebtn:hover{
+    transform: translateY(0);
+    box-shadow: none;
     }
     #userattempt{
         margin-left: 20px;
