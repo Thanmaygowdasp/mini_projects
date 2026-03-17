@@ -8,23 +8,15 @@ body{
 font-family:'Poppins',sans-serif;
 background:linear-gradient(135deg,#667eea,#764ba2);
 min-height:100vh;
-display:flex;
-flex-direction:column;
-align-items:center;
 }
-
-h1{
-color:white;
-margin-top:60px;
-letter-spacing:2px;
-font-size:40px;
-}
-
 .projects{
 display:flex;
 gap:30px;
 flex-wrap:wrap;
 margin-top:80px;
+display: flex;
+justify-content: center;
+align-items: center;
 }
 
 .card{
@@ -60,3 +52,57 @@ transition:0.3s;
 background:#4f46e5;
 transform:scale(1.05);
 }
+.menu{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 10px;
+    margin-top: 45px;
+}
+.menu img{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-left: 5%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+.menu ul{
+    position: absolute;
+    width: 250px;
+    height: 200px;
+    background-color: white;
+    border-radius: 25px;
+    top: 15%;
+    left: 5%;
+    border: 2px solid #4f46e5;
+    cursor: pointer;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.393);
+    display: none;
+}
+.menu li{
+    text-decoration: none;
+    padding: 20px;
+    position: relative;
+    width: 100%;
+    list-style: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    transition: all 0.3s ease;
+}
+.menu li:hover{
+    border-bottom: 2px solid rgb(85, 0, 255);
+}
+.menu li a{
+    text-decoration: none;
+    color: black;
+}
+.menu h1{
+    color:white;
+    letter-spacing:2px;
+    font-size:40px;
+    margin-left: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}    
