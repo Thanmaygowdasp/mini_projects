@@ -137,3 +137,14 @@ transform:scale(1.05);
     transform: translateY(0);
     pointer-events: auto;
 }
+.profile_pop{
+    position: absolute;
+    width: 60%;
+    height: 65%;
+    left: 20%;
+    top: 20%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    background-color: white;
+}
