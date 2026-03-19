@@ -138,6 +138,7 @@ transform:scale(1.05);
     pointer-events: auto;
 }
 .profile_pop{
+    display: none;
     position: absolute;
     width: 60%;
     height: 65%;
@@ -147,4 +148,17 @@ transform:scale(1.05);
     align-items: center;
     border-radius: 25px;
     background-color: white;
+}
+.profilepic{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-color: #464552;
+    border-radius: 100px;
+    top: 50px;
+    left: 10%;
+}
+.profile_pop h1{
+    margin-left: 30%;
+    margin-top:  75px;
 }
