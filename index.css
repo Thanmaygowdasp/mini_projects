@@ -162,41 +162,77 @@ transform:scale(1.05);
     margin-left: 30%;
     margin-top:  75px;
 }
-.icon{
+.icon-linkedin{
     display: flex;
-    margin-left: 250px;
-    margin-top: 20px;
+    gap: 15px;
+    margin-left: 270px;
 }
-.linked{
-    position: absolute;
-    left: 335px;
-    top: 155px;
-    font-size: 25px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: 500; 
-    opacity: 1;
-    transition: 0.3s;
-    white-space: nowrap;
-    transform: translateX(0%) translateY(0px);
-    z-index: 0;
-}
-.linked::after{
-  content:"";
-  position:absolute;
-  width: 120px;
-  height: 40px;
-  background-color: #667eea;
-  left: -15px;
-  top: -5px;
-  z-index: -1;
-}
-.icon:hover .linked{
-    opacity: 1;
-    transform: translateX(0%) translateY(0);
-}
-.icon img{
+.icon-linkedin img{
+    position: relative;
+    display: flex;
     width: 55px;
     height: 55px;
-    margin-left: 50%;
+}
+.label1{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     z-index: 1;
+    transition: all 0.3s ease-in-out;
+    transform: translateY(20px);
+}
+.label1::after{
+    border-radius: 25px;
+    content: '';
+    position: absolute;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: 60px;
+    height: 10px;
+    padding: 15px;
+    background-color: #1e00c8;
+    z-index: -1;
+}
+.icon-linkedin:hover .label1{
+    opacity: 1;
+    transform: translateY(0px);
+}
+.icon-linkedin{
+    display: flex;
+    gap: 15px;
+    margin-left: 270px;
+}
+.icon-linkedin img{
+    position: relative;
+    display: flex;
+    width: 55px;
+    height: 55px;
+}
+.label1{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    transition: all 0.3s ease-in-out;
+    transform: translateY(20px);
+}
+.label1::after{
+    border-radius: 25px;
+    content: '';
+    position: absolute;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: 60px;
+    height: 10px;
+    padding: 15px;
+    background-color: #1e00c8;
+    z-index: -1;
+}
+.icon-linkedin:hover .label1{
+    opacity: 1;
+    transform: translateY(0px);
 }
