@@ -130,15 +130,13 @@ transform:scale(1.05);
 
     transition: 0.3s ease;
 }
-
-/* ACTIVE STATE */
 .dropdown.active{
     opacity: 1;
     transform: translateY(0);
     pointer-events: auto;
 }
 .profile_pop{
-    display: block;
+    display: none;
     position: absolute;
     width: 60%;
     height: 65%;
