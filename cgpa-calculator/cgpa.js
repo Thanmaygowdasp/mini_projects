@@ -28,7 +28,7 @@ function addsubjects(){
 }
 
 function cgpacalculator(){
-    let inputnum = document.querySelectorAll("#subjects inputs")
+    let inputnum = document.querySelectorAll("#subjects input")
 
     let total_cgpa = 0
     let count_cgpa = 0
@@ -36,8 +36,13 @@ function cgpacalculator(){
     inputnum.forEach(function(input){
         let value = Number(input.value)
 
-        if(inputnum.value !== ""){
-            console.log(value)
+        if(input.value !== "" && value <= 10 && value >= 0){
+            total_cgpa = total_cgpa + value
+            count_cgpa++
         }
     })
+    console.log("total:", total_cgpa)
+    console.log("count:", count_cgpa)
+    let cgpa = total_cgpa / count_cgpa
+    console.log(cgpa)
 }
