@@ -136,7 +136,7 @@ transform:scale(1.05);
     pointer-events: auto;
 }
 .profile_pop{
-    display: none;
+    display: block;
     position: absolute;
     width: 60%;
     height: 65%;
@@ -240,4 +240,31 @@ transform:scale(1.05);
 .icon-youtube:hover .label2{
     opacity: 1;
     transform: translateY(0px);
+}
+.about{
+    position: absolute;
+    top: 235px;
+    width: 85%;
+    font-size: 25px;
+    text-align: left;
+    left: 100px;
+    font-weight: 100;
+    z-index: 1;
+}
+.name{
+    color: white;
+}
+.name::before{
+    content: '';
+    width: 255px;
+    height: 40px;
+    background-color: #3325f6c7;
+    position: absolute;
+    z-index: -1;
+    padding: 5px;
+    top: -5px;
+    left: 70px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
 }
