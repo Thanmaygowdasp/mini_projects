@@ -67,7 +67,7 @@ transform:scale(1.05);
     background-color: white;
     border-radius: 25px;
     top: 15%;
-    left: 5%;
+    left: 100px;
     border: 2px solid #4f46e5;
     cursor: pointer;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.393);
@@ -113,30 +113,13 @@ transform:scale(1.05);
     height: 30px;
     cursor: pointer;
 }
-.dropdown{
-    position: absolute;
-    width: 250px;
-    height: 200px;
-    background-color: white;
-    border-radius: 25px;
-    top: 15%;
-    left: 5%;
-    border: 2px solid #4f46e5;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
-
+#dropdown{
+    margin-top: 25px;
+    transition: all 0.3s ease-in-out;
     opacity: 0;
-    transform: translateY(-20px);
-    pointer-events: none;
-
-    transition: 0.3s ease;
-}
-.dropdown.active{
-    opacity: 1;
-    transform: translateY(0);
-    pointer-events: auto;
 }
 .profile_pop{
-    display: block;
+    display: none;
     position: absolute;
     width: 60%;
     height: 65%;
@@ -146,6 +129,7 @@ transform:scale(1.05);
     align-items: center;
     border-radius: 25px;
     background-color: white;
+    transition: all 0.3s ease;
 }
 .profilepic{
     position: absolute;
