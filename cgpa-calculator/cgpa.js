@@ -56,7 +56,7 @@ function cgpacalculator(){
             alert("Grade should be between 1-10")
             return
         }
-        if(value == 0){
+        if(subject_count === 0){
             alert("Atleast input 1")
         }
     })
