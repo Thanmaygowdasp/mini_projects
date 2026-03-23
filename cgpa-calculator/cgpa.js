@@ -37,11 +37,22 @@ function cgpacalculator(){
     let total_count = 0
     let subject_count = 0
 
-    let value = Number(inputs.value)
-
     inputs.forEach(function(input){
-        if(inputs.value != ""){
-            console.log(value)
+
+        let value = Number(input.value)
+
+        if(input.value != "" && value < 10 && value > 0){
+            total_count = total_count + value
+            subject_count++
+        }
+
+        if(value > 10){
+            alert("Grade should be Between 0-10")
+        }
+        if(value < 10){
+            alert("Grade should be Between 0-10")
         }
     })
+    let cgpa = total_count/subject_count
+    console.log(cgpa)
 }
