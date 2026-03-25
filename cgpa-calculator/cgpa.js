@@ -3,6 +3,7 @@ let subject_adding = document.getElementById("subject_adding")
 let cgpacalculate = document.getElementById("calculator")
 let result = document.getElementById("result")
 let error = document.getElementById("error")
+let menu_clicker = document.getElementById("menu-clicker")
 
 subject_adding.addEventListener("click", function(){
     subject_add()
@@ -12,15 +13,21 @@ cgpacalculate.addEventListener("click", function(){
     cgpacalculator()
 })
 
+menu_clicker.addEventListener("click", function(){
+    menu_clicker.classList.toggle = ""
+})
+
+
 let waringsubjects = 8
 let subjects_added = 0
 let alretmsgforsub = false
+let subject_number = 1
 function subject_add(){
     let container = document.getElementById("subjects")
     let input = document.createElement("input")
 
     input.type = "Number"
-    input.placeholder = "Enter the Grade"
+    input.placeholder = "Enter the Grade " + subject_number++
 
     container.append(input)
     subjects_added++
