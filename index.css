@@ -306,10 +306,18 @@ transform:scale(1.05);
     z-index: 1;
 }
 
-@media (max-width: 600px) {
-    body{
-        font-family:'Poppins',sans-serif;
-        background:linear-gradient(135deg,#667eea,#764ba2);
-        min-height:100vh;
+@media (max-width: 800px) {
+    .navbar h1{
+        font-size: 30px;
+        margin-top: 20px;
+    }
+    .navbar img{
+        display: inline;
+    }
+    .navbar ul{
+        display: block;
+    }
+    .navbar li{
+        display: block;
     }
 }

@@ -6,9 +6,19 @@ let dropdown = document.getElementById("dropdown")
 let overlay = document.getElementById("overlay")
 let profile_closer = document.getElementById("profile_closer")
 let isOpen = false
+
 menu_clicker.addEventListener("mouseover", function(){
+
+    if(!isOpen){
         dropdown.style.opacity = "1"
         dropdown.style.marginTop = "0"
+        isOpen = true
+    }else{
+        dropdown.style.opacity = "0"
+        dropdown.style.marginTop = "-20px"
+        isOpen = false
+    }
+
 })
 profile_btn.addEventListener("click", function(){
     profile_pop.style.display = "block"
