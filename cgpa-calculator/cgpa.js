@@ -75,5 +75,5 @@ function cgpacalculator(){
         }
     let cgpa = total_count/subject_count
     cgpa = cgpa.toFixed(2)
-    result.innerText = cgpa
+    result.innerText = "Result:\t" + cgpa
 }   

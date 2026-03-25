@@ -65,4 +65,8 @@ input{
     border: none;
     background-color: white;
 }
+#result{
+    display: flex;
+    margin-top: 25px;
+}
 }
