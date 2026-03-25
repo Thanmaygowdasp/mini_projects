@@ -2,6 +2,7 @@ let subjects = document.getElementById("subjects")
 let subject_adding = document.getElementById("subject_adding")
 let cgpacalculate = document.getElementById("calculator")
 let result = document.getElementById("result")
+let error = document.getElementById("error")
 
 subject_adding.addEventListener("click", function(){
     subject_add()

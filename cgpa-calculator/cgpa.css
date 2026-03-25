@@ -5,3 +5,32 @@ body{
     width: 100%;
     min-height: 100vh
 }
+.cgpa{
+    display: inline;
+    justify-content: center;
+    align-items: center;
+}
+.cgpa h1{
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+    align-items: center;
+    color: white;
+}
+#subject_adding{
+    position: fixed;
+    margin-top: 10px;
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+    left: 10%;
+    padding: 10px;
+    text-align: center;
+    outline: none;
+    background: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 20px;
+
+}
