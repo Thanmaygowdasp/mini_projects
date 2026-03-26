@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result Calculator</title>
+    <link rel="stylesheet" href="./front-page.css">
+</head>
+<body>
+    <div class="section" id="home">
+        <h1>Result Calculator</h1>
+        <div class="welcome">
+            <h2>Welcome to the</h2>
+            <h3>CGPA & SGPA</h3>
+            <p class="animationline"></p>
+            <p>
+              Calculate your SGPA, CGPA, and track your academic performance easily in one place.
+            </p>
+        </div>
+    </div>
+    <a href="#sgpa" class="btn">SGPA CALCULATOR</a>
+    <a href="#cgpa" class="btn">CGPA CALCULATOR</a>
+    <div id="sgpa" class="section">
+        <h2>SGPA Calculator</h2>
+        <label>Select Number of Subjects</label>
+        <select id="subjectcount">
+            <option value="">-- Select --</option>
+            <option value="1">1 Subjects</option>
+            <option value="2">2 Subjects</option>
+            <option value="3">3 Subjects</option>
+            <option value="4">4 Subjects</option>
+            <option value="5">5 Subjects</option>
+            <option value="6">6 Subjects</option>
+            <option value="7">7 Subjects</option>
+            <option value="8">8 Subjects</option>
+        </select>
+        <div id="subjectInputs"></div>
+        <button id="addExtra">+ Add Extra Subject</button>
+        <br><br>
+        <button class="calc-btn">Calculate SGPA</button>
+        <h3 id="sgpaResult"></h3>
+        <a href="#home" class="back">⬅ Back</a>
+    </div>
+
+    <div id="cgpa" class="section">
+      <h2>CGPA Calculator</h2>
+    </div>
+</body>
+</html>
