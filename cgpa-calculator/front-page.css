@@ -82,37 +82,27 @@ a:hover{
 }
 .section {
   display: none;
-}
-#home {
-  display: block;
-}
-#sgpa:target {
-  display: block;
-}
-#cgpa:target {
-  display: block;
-}
-#sgpa:target ~ #home,
-#cgpa:target ~ #home {
-  display: none;
-}
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}  
 .section{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
-#sgpa h2{
+#sgpa-section h2{
     margin-left: 50px;
     color: white;
     font-size: 35px;
     margin-bottom: 0;
 }
-#sgpa label{
+#sgpa-section label{
     margin-left: 50px;
     font-size: 25px;
 }
-#sgpa select{
+#sgpa-section select{
     display: flex;
     flex-direction: column;
     justify-content: center;
