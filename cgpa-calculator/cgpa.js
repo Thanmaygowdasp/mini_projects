@@ -14,7 +14,7 @@ cgpacalculate.addEventListener("click", function(){
 })
 
 menu_clicker.addEventListener("click", function(){
-    menu_clicker.classList.toggle = ""
+    menu_clicker.className = "menu-open"
 })
 
 
