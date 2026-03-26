@@ -1,4 +1,11 @@
 let sgpa_section = document.getElementById("sgpa-section")
-sgpa_section.addEventListener("click", function(){
-    sgpa_section.style.display = "block"    
+let opensgpa = document.getElementById("opensgpa")
+let backhome = document.getElementById("backhome")
+
+opensgpa.addEventListener("click", function(){
+    sgpa_section.classList.add("show")
+})
+
+backhome.addEventListener("click", function(){
+    sgpa_section.classList.remove("show")
 })

@@ -87,7 +87,16 @@ button:hover{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}  
+  opacity: 0;
+  transform: translateY(40px);
+  pointer-events: none;
+  transition: all 0.4s linear;
+} 
+.section.show{
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
 #sgpa-section h2{
     color: white;
     font-size: 35px;
@@ -108,4 +117,25 @@ button:hover{
     outline: none;
     border: none;
     font-size: 20px;
+}
+#addExtra{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0;
+}
+.calc-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0px;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.back{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0px;
+    margin-top: 0;
 }
