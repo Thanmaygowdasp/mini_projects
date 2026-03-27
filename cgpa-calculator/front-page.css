@@ -161,7 +161,7 @@ button:hover{
 }
 .sectioncgpa{
     position: absolute;
-    top: 30%;
+    top: 45%;
     left: 0;
     width: 100%;
     min-height: 100vh;
@@ -169,10 +169,15 @@ button:hover{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    opacity: 1;
+    opacity: 0;
     transform: translateY(40px);
     pointer-events: none;
     transition: all 0.4s linear;
+}
+.sectioncgpa.showcgpa{
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
 }
 #cgpa-section h2{
     color: white;

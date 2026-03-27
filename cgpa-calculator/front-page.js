@@ -75,3 +75,12 @@ calc_btn.addEventListener("click", function(){
 
 
 //cgpa calculation
+let cgpa_section = document.getElementById("cgpa-section")
+let opencgpa = document.getElementById("opencgpa")
+
+opencgpa.addEventListener("click", function(){
+    cgpa_section.classList.add("showcgpa")
+})
+opencgpa.addEventListener("click", function(){
+    cgpa_section.classList.remove("showcgpa")
+})
