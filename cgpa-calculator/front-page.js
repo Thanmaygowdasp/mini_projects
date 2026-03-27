@@ -5,6 +5,7 @@ let subjectinputs = document.getElementById("subjectInputs")
 let subjectcount = document.getElementById("subjectcount")
 let addExtra = document.getElementById("addExtra")
 let calc_btn = document.querySelector(".calc-btn")
+let sgpaResult = document.getElementById("sgpaResult")
 
 opensgpa.addEventListener("click", function(){
     sgpa_section.classList.add("show")
@@ -70,7 +71,5 @@ calc_btn.addEventListener("click", function(){
     }
 
     let sgpa = totalpoints / totalcredits
-    console.log(totalcredits)
-    console.log(totalpoints)
-    console.log(sgpa)
+    sgpaResult.innerHTML = "SGPA =" + sgpa.toFixed(2)
 })
