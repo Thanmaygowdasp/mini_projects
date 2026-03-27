@@ -72,3 +72,6 @@ calc_btn.addEventListener("click", function(){
     let sgpa = totalpoints / totalcredits
     sgpaResult.innerHTML = "SGPA =" + sgpa.toFixed(2)
 })
+
+
+//cgpa calculation

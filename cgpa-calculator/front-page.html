@@ -46,8 +46,24 @@
         <button id="backhome" class="back">⬅ Back</button>
     </div>
 
-    <div id="cgpa" class="section">
+    <div id="cgpa-section" class="sectioncgpa">
       <h2>CGPA Calculator</h2>
+      <label>Select Number of Subjects</label>
+      <select id="subjectcountcgpa">
+        <option value="">-- Select --</option>
+            <option value="1">1 Subjects</option>
+            <option value="2">2 Subjects</option>
+            <option value="3">3 Subjects</option>
+            <option value="4">4 Subjects</option>
+            <option value="5">5 Subjects</option>
+            <option value="6">6 Subjects</option>
+            <option value="7">7 Subjects</option>
+            <option value="8">8 Subjects</option>
+      </select>
+      <div id="subjectinputscgpa"></div>
+      <button class="calc-btncgpa">Calculate CGPA</button>
+      <div id="cgparesult"></div>
+      <button id="backhome2" class="back">⬅ Back</button>
     </div>
     <script src="./front-page.js"></script>
 </body>
