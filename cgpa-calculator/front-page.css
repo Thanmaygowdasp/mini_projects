@@ -139,3 +139,25 @@ button:hover{
     margin-left: 0px;
     margin-top: 0;
 }
+#subjectInputs{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+#subjectInputs input{
+    width: 35%;
+    margin-left: 20px;
+    padding: 10px;
+    outline: none;
+    border: none;
+    background: white;
+    border-radius: 50px;
+}
+#addExtra{
+    font-size: 15px;
+    width: 50%;
+    padding: 5px;
+}

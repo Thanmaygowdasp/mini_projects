@@ -4,6 +4,7 @@ let backhome = document.getElementById("backhome")
 let subjectinputs = document.getElementById("subjectInputs")
 let subjectcount = document.getElementById("subjectcount")
 let addExtra = document.getElementById("addExtra")
+let calc_btn = document.querySelector(".calc-btn")
 
 opensgpa.addEventListener("click", function(){
     sgpa_section.classList.add("show")
@@ -16,9 +17,10 @@ backhome.addEventListener("click", function(){
 
 function createinput(){
     let div = document.createElement("div")
+    div.className = "userinput"
     div.innerHTML = `
-    <input type="number" placeholder="enter Your Marks">
-    <input type="number" placeholder="enter Your credits">
+    <input type="number" placeholder="Enter Your Marks" class="marks">
+    <input type="number" placeholder="Enter Your credits" class="credits">
     `;
     subjectinputs.appendChild(div)
 }
@@ -30,10 +32,45 @@ subjectcount.onchange = function(){
         createinput()
     }
 }
-
-addExtra.addEventListener("click", function(){
+addExtra.addEventListener("click", function(){  
     createinput()
 })
 
-console.log("Dropdown working:", this.value)
+function gradepoints(marks){
+    if(marks >= 90 && marks <= 100) return 10;
+    else if(marks >= 80) return 9;
+    else if(marks >= 70) return 8;
+    else if(marks >= 60) return 7;
+    else if(marks >= 50) return 6;
+    else if(marks >= 40) return 5;
+    else return 0;
+}
 
+calc_btn.addEventListener("click", function(){
+    let userinputs = document.querySelectorAll(".userinput")
+
+    let totalcredits = 0
+    let totalpoints = 0;
+
+    userinputs.forEach(userinputs =>{
+        let marks = userinputs.querySelector(".marks").value
+        let credits = userinputs.querySelector(".credits").value
+
+        marks = Number(marks)
+        credits = Number(credits)
+
+        if(!marks || !credits) return;
+        let gp = gradepoints(Number(marks))
+
+        totalcredits += credits
+        totalpoints += gp * credits
+    })
+    if(totalcredits === 0){
+        console.log("enter the credits ")
+    }
+
+    let sgpa = totalpoints / totalcredits
+    console.log(totalcredits)
+    console.log(totalpoints)
+    console.log(sgpa)
+})
