@@ -8,9 +8,8 @@ let calc_btn = document.querySelector(".calc-btn")
 let sgpaResult = document.getElementById("sgpaResult")
 
 opensgpa.addEventListener("click", function(){
-    sgpa_section.classList.add("show")
+    sgpa_section.classList.toggle("show")
 })
-
 backhome.addEventListener("click", function(){
     sgpa_section.classList.remove("show")
 })
