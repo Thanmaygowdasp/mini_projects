@@ -81,6 +81,7 @@ let opencgpa = document.getElementById("opencgpa")
 let backhome2 = document.getElementById("backhome2")
 let subjectinputscgpa = document.getElementById("subjectinputscgpa")
 let subjectcountcgpa = document.getElementById("subjectcountcgpa")
+let calc_btncgpa = document.getElementById("calc-btncgpa")
 
 opencgpa.addEventListener("click", function(){
     cgpa_section.classList.toggle("showcgpa")
@@ -92,11 +93,11 @@ backhome2.addEventListener("click", function(){
 
 let sumcount = 8
 function inputsforcgpa(semcount){
-        for(let k = 0; k<semcount; k++){
+        for(let k = 1; k<=semcount; k++){
             let div = document.createElement("div")
         div.className = "inputcgpa"
         div.innerHTML = `
-        <input type="number" placeholder="Enter sem ${k} cgps">
+        <input type="number" placeholder="Enter sem ${k} cgps" class="cgpa">
         `
         subjectinputscgpa.appendChild(div)
         }
@@ -104,7 +105,28 @@ function inputsforcgpa(semcount){
 
 subjectcountcgpa.addEventListener("change", function(){
     subjectinputscgpa.innerHTML = ""
-    for(let j = 0; j<this.value; j++){
-        inputsforcgpa()
+        inputsforcgpa(Number(this.value))
+})
+
+
+calc_btncgpa.addEventListener("click", function(){
+    let ursercgpa = document.querySelectorAll(".inputcgpa")
+
+    let totalcgpa = 0
+    let totalsem = 0
+
+    ursercgpa.forEach(ursercgpa =>{
+        let cgpa = ursercgpa.querySelector(".cgpa")
+        let value = Number(cgpa.value)
+        if(!value)   return;
+
+        totalcgpa += value
+        totalsem = totalsem + 1
+    })
+    if(totalsem === 0){
+        console.log("Enter CGPA values")
+        return
     }
+    let finalcgpa = totalcgpa/totalsem
+    console.log(finalcgpa)
 })
