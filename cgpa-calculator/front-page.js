@@ -9,6 +9,7 @@ let sgpaResult = document.getElementById("sgpaResult")
 
 opensgpa.addEventListener("click", function(){
     sgpa_section.classList.toggle("show")
+    cgpa_section.classList.remove("showcgpa")
 })
 backhome.addEventListener("click", function(){
     sgpa_section.classList.remove("show")
@@ -77,10 +78,33 @@ calc_btn.addEventListener("click", function(){
 //cgpa calculation
 let cgpa_section = document.getElementById("cgpa-section")
 let opencgpa = document.getElementById("opencgpa")
+let backhome2 = document.getElementById("backhome2")
+let subjectinputscgpa = document.getElementById("subjectinputscgpa")
+let subjectcountcgpa = document.getElementById("subjectcountcgpa")
 
 opencgpa.addEventListener("click", function(){
-    cgpa_section.classList.add("showcgpa")
-})
-opencgpa.addEventListener("click", function(){
+    cgpa_section.classList.toggle("showcgpa")
+    sgpa_section.classList.remove("show")
+})  
+backhome2.addEventListener("click", function(){
     cgpa_section.classList.remove("showcgpa")
+})
+
+let sumcount = 8
+function inputsforcgpa(semcount){
+        for(let k = 0; k<semcount; k++){
+            let div = document.createElement("div")
+        div.className = "inputcgpa"
+        div.innerHTML = `
+        <input type="number" placeholder="Enter sem ${k} cgps">
+        `
+        subjectinputscgpa.appendChild(div)
+        }
+}
+
+subjectcountcgpa.addEventListener("change", function(){
+    subjectinputscgpa.innerHTML = ""
+    for(let j = 0; j<this.value; j++){
+        inputsforcgpa()
+    }
 })

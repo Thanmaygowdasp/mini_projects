@@ -160,11 +160,8 @@ button:hover{
     border-radius: 50px;
 }
 .sectioncgpa{
-    position: absolute;
-    top: 45%;
-    left: 0;
     width: 100%;
-    min-height: 100vh;
+    margin-top: -125%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -173,6 +170,7 @@ button:hover{
     transform: translateY(40px);
     pointer-events: none;
     transition: all 0.4s linear;
+    z-index: -1;
 }
 .sectioncgpa.showcgpa{
     opacity: 1;
