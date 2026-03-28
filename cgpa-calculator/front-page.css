@@ -214,3 +214,18 @@ button:hover{
     width: 25%;
     font-size: 15px;
 }
+.inputcgpa{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+}
+.cgpa{
+    outline: none;
+    border: none;
+    width: 150%;
+    height: 50%;
+    border-radius: 50px;
+    padding: 15px;
+}
