@@ -82,6 +82,7 @@ let backhome2 = document.getElementById("backhome2")
 let subjectinputscgpa = document.getElementById("subjectinputscgpa")
 let subjectcountcgpa = document.getElementById("subjectcountcgpa")
 let calc_btncgpa = document.getElementById("calc-btncgpa")
+let resultcgpa = document.getElementById("cgparesult")
 
 opencgpa.addEventListener("click", function(){
     cgpa_section.classList.toggle("showcgpa")
@@ -128,5 +129,5 @@ calc_btncgpa.addEventListener("click", function(){
         return
     }
     let finalcgpa = totalcgpa/totalsem
-    console.log(finalcgpa)
+    resultcgpa.innerHTML = "Result =\t" + finalcgpa.toFixed(2)
 })
