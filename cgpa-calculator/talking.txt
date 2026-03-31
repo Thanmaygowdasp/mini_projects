@@ -1,23 +1,23 @@
+@media (max-width: 600px) {
 body{
     margin: 0;
     padding: 0;
     background: linear-gradient(73deg, #9900ff,#6600ff,#0800ff,#003cff,#00b7ff);
     width: 100%;
-    min-height: 100vh   
+    min-height: 100vh
 }
 h1{
-   display: flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     color: white;
     font-size: 40px;
-    margin-top: 50px; 
+    margin-top: 50px;
 }
 .welcome {
   padding: 15px;
   border-radius: 8px;
   margin-bottom: 20px;
-  margin-left: 35px;
 }
 
 .welcome h2 {
@@ -42,13 +42,13 @@ h1{
         width: 0;
     }  
     25%{
-        width: 35%;
+        width: 100%;
     } 
     50%{
-        width: -35%;
+        width: -100%;
     } 
     75%{
-        width: 35%;
+        width: 100%;
     }
     100%{
         width: 0%;
@@ -70,7 +70,7 @@ button{
     text-decoration: none;
     font-size: 25px;
     width: 80%;
-    margin-left: 10%;
+    margin-left: 40px;
     border-radius: 25px;
     height: 100%;
     background: white;
@@ -162,7 +162,7 @@ button:hover{
 }
 .sectioncgpa{
     width: 100%;
-    margin-top: -55%;
+    margin-top: -120%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -239,39 +239,5 @@ button:hover{
     background-color: white;
     border-radius: 25px;
     text-align: center;
-}
-@media (max-width:800px) {
-    .welcome{
-        margin-left: 15px;
-    }
-    @keyframes underline {
-    0%{
-        width: 0;
-    }  
-    25%{
-        width: 100%;
-    } 
-    50%{
-        width: -100%;
-    } 
-    75%{
-        width: 100%;
-    }
-    100%{
-        width: 0%;
-    }   
-}
-.sectioncgpa{
-    width: 100%;
-    margin-top: -125%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transform: translateY(40px);
-    pointer-events: none;
-    transition: all 0.4s linear;
-    z-index: -1;
 }
 }
