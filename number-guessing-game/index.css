@@ -7,6 +7,7 @@ body{
 }
 .number-gussing{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -16,4 +17,65 @@ body{
     margin-top: 50px;
     color: white;
     text-shadow: 0 0 20px rgb(0, 0, 0);
+}
+#leftNum{
+    position: absolute;
+    left: 35%;
+    top: 25%;
+    font-size: 30px;
+}
+#rightNum{
+    position: absolute;
+    left: 975px;
+    top: 25%;
+    font-size: 30px;
+}
+.number-gussing button{
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    width: 20%;
+    border-radius: 50px;
+    font-size: 25px;
+    outline: none;
+    border: none;
+    transition: all 0.3s ease;
+}
+.number-gussing button:hover{
+    width: 50%;
+}
+.number-gussing button:focus{
+    width: 50%;
+}
+.user_guessing{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vh;
+    margin-top: 50px;
+    border-radius: 50px;
+    box-shadow: 0 0 50px rgba(0,0,0,0.8);
+    height: 45vh;
+    background-color: white;
+}
+.user_guessing input{
+    width: 80%;
+    margin-top: 5%;
+    padding: 25px;
+    border: 2px solid black;
+    border-radius: 50px;
+    font-size: 15px;
+    align-items: center;
+    justify-content: top;  
+}
+#submitBtn{
+    margin-top: 5%;
+    font-size: 25px;
+    width: 80%;
+    background-color: #0707e4;
+    color: white;
+}
+#Warning{
+    font-size: 25px;
+    font-weight: 300;
 }
