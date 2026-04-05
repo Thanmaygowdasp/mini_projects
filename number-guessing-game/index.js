@@ -42,9 +42,11 @@ let numberGenerated = false;
 btn.addEventListener("click", ()=>{
     if(!numberGenerated){
         generated_number = Math.floor(Math.random()*100)+1
+        console.log(generated_number)
         numberGenerated = true
         if(numberGenerated){
             btn.innerText = "Generated"
+            btn.style.color = "rgb(188, 188, 188)"
         }
     }else{
         console.log(generated_number)
