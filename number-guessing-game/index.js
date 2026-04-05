@@ -4,6 +4,7 @@ const rightNum = document.getElementById("rightNum");
 const userinput = document.getElementById("userinput")
 const submit = document.getElementById("submitBtn")
 const Warning = document.getElementById("Warning")
+const result = document.getElementById("result")
 
 let leftInterval;
 let rightInterval;
@@ -37,16 +38,25 @@ btn.addEventListener("mouseleave", () => {
     rightNum.textContent = "";
 });
 let generated_number = 0
+let numberGenerated = false;
 btn.addEventListener("click", ()=>{
-    generated_number = Math.floor(Math.random()*100)+1
-    console.log(generated_number)
+    if(!numberGenerated){
+        generated_number = Math.floor(Math.random()*100)+1
+        numberGenerated = true
+        if(numberGenerated){
+            btn.innerText = "Generated"
+        }
+    }else{
+        console.log(generated_number)
+    }
 })
 let chances = 3
 function guessing_answer(){
     if(chances>0){
         if(user_enter_number == generated_number){
-            console.log("Done")
-            Warning.innerText = "You Won Bro"
+            result.style.display = "inline"
+            Warning.style.display = "none"
+            submit.style.display = "none"
         }else{
             console.log("none")
         }

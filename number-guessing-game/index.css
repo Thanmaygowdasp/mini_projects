@@ -44,9 +44,6 @@ body{
 .number-gussing button:hover{
     width: 50%;
 }
-.number-gussing button:focus{
-    width: 50%;
-}
 .user_guessing{
     display: flex;
     flex-direction: column;
@@ -78,4 +75,13 @@ body{
 #Warning{
     font-size: 25px;
     font-weight: 300;
+    margin-bottom: 0;
+}
+#result{
+    font-size: 35px;
+    font-weight: 600;
+    margin-top: 10%;
+    margin-bottom: 0;
+    display: none;
+    color: rgba(0, 0, 0, 0.574);
 }
