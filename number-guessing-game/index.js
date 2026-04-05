@@ -5,6 +5,7 @@ const userinput = document.getElementById("userinput")
 const submit = document.getElementById("submitBtn")
 const Warning = document.getElementById("Warning")
 const result = document.getElementById("result")
+const Differencedisplay = document.getElementById("Difference")
 
 let leftInterval;
 let rightInterval;
@@ -67,11 +68,28 @@ function guessing_answer(){
         if(chances == 0){
             submit.style.display = "none"
             Warning.innerText = "Please Reset Bro"
+            Differencedisplay.style.display = "none"
         }
+    }
+}
+let difference_of_comp_and_user = 0
+function difference(){
+    difference_of_comp_and_user = Math.abs(generated_number - user_enter_number)
+    console.log(difference_of_comp_and_user)
+    if (difference_of_comp_and_user > 50){
+        Differencedisplay.innerText = "Your Too High"
+    }else if(difference_of_comp_and_user > 25){
+        Differencedisplay.innerText = "Your High"
+    }
+    else if(difference_of_comp_and_user > 15){
+        Differencedisplay.innerText = "Your near"
+    }else{
+        Differencedisplay.innerText = "Your Close"
     }
 }
 let user_enter_number = 0
 submit.addEventListener("click", ()=>{
     user_enter_number = Number(userinput.value)
     guessing_answer()
+    difference()
 })

@@ -52,7 +52,7 @@ body{
     margin-top: 50px;
     border-radius: 50px;
     box-shadow: 0 0 50px rgba(0,0,0,0.8);
-    height: 45vh;
+    height: 50vh;
     background-color: white;
 }
 .user_guessing input{
@@ -75,7 +75,7 @@ body{
 #Warning{
     font-size: 25px;
     font-weight: 300;
-    margin-bottom: 0;
+    margin-bottom: 0px;
 }
 #result{
     font-size: 35px;
@@ -84,4 +84,12 @@ body{
     margin-bottom: 0;
     display: none;
     color: rgba(0, 0, 0, 0.574);
+}
+.Difference{
+    display: flex;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 30px;
+    font-weight: 200;
+    margin-bottom: 0px;
 }
