@@ -67,7 +67,7 @@ function guessing_answer(){
         Warning.innerText = `You Left With ${chances} chances`
         if(chances == 0){
             submit.style.display = "none"
-            Warning.innerText = "Please Reset Bro"
+            Warning.innerText = `Sorry Bro! number was ${generated_number} Reset again`
             Differencedisplay.style.display = "none"
         }
     }
