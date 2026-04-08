@@ -6,6 +6,7 @@ const submit = document.getElementById("submitBtn")
 const Warning = document.getElementById("Warning")
 const result = document.getElementById("result")
 const Differencedisplay = document.getElementById("Difference")
+const reset = document.getElementById("reset")
 
 let leftInterval;
 let rightInterval;
@@ -57,6 +58,7 @@ let chances = 3
 function guessing_answer(){
     if(chances>0){
         if(user_enter_number == generated_number){
+            reset.innerText = "You Won!!"
             result.style.display = "inline"
             Warning.style.display = "none"
             submit.style.display = "none"
@@ -85,6 +87,9 @@ function difference(){
         Differencedisplay.innerText = "Your near"
     }else{
         Differencedisplay.innerText = "Your Close"
+    }
+    if(Math.abs(user_enter_number == generated_number)){
+        reset.innerText = "You Won!!"
     }
 }
 let user_enter_number = 0

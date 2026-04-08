@@ -93,6 +93,13 @@ body{
     font-weight: 200;
     margin-bottom: 0px;
 }
+#reset{
+    position: absolute;
+    top: 70%;
+    width: 10%;
+    padding: 10px;
+    display: none;
+}
 @media (max-width: 600px) {
     .number-gussing h1{
         font-size: 25px;
@@ -108,6 +115,9 @@ body{
         border: none;
         transition: all 0.3s ease;
         margin-top: 30px;
+    }
+    .number-gussing button:hover{
+        width: 80%;
     }
     #leftNum{
         display: none;
@@ -147,5 +157,11 @@ body{
         font-size: 20px;
         font-weight: 300;
         margin-bottom: 0px;
+    }
+    #reset{
+        position: absolute;
+        top: 65%;
+        width: 50%;
+        padding: 10px;
     }
 }
