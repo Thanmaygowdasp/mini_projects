@@ -71,6 +71,7 @@ function guessing_answer(){
             submit.style.display = "none"
             Warning.innerText = `Sorry Bro! number was ${generated_number} Reset again`
             Differencedisplay.style.display = "none"
+            reset.style.display = "block"
         }
     }
 }
@@ -85,13 +86,26 @@ function difference(){
     }
     else if(difference_of_comp_and_user > 15){
         Differencedisplay.innerText = "Your near"
-    }else{
+    }else if(difference_of_comp_and_user > 10){
         Differencedisplay.innerText = "Your Close"
-    }
-    if(Math.abs(user_enter_number == generated_number)){
-        reset.innerText = "You Won!!"
+    }else if(difference_of_comp_and_user == 0){
+        Differencedisplay.style.display = "none"
+        result.innerText = "You WON!!"
     }
 }
+function resetfun(){
+    numberGenerated = false
+    btn.innerText = "Generate Number"
+    btn.style.color = "rgb(0, 0, 0)"
+    submit.style.display = "inline"
+    Differencedisplay.style.display = "block"
+    reset.style.display = "none"
+    chances = 3
+    Warning.innerText = `You Left With ${chances} chances`
+}
+reset.addEventListener("click", ()=>{
+    resetfun()
+})
 let user_enter_number = 0
 submit.addEventListener("click", ()=>{
     user_enter_number = Number(userinput.value)
