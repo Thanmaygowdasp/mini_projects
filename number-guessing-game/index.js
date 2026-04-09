@@ -60,8 +60,11 @@ function guessing_answer(){
         if(user_enter_number == generated_number){
             reset.innerText = "You Won!!"
             result.style.display = "inline"
-            Warning.style.display = "none"
+            Warning.style.opacity = "0"
             submit.style.display = "none"
+            reset.style.display = "block"
+            reset.innerText = "RESET"
+            reset.style.marginTop = "25px"
         }else{
             console.log("none")
         }
@@ -102,6 +105,10 @@ function resetfun(){
     reset.style.display = "none"
     chances = 3
     Warning.innerText = `You Left With ${chances} chances`
+    Differencedisplay.innerText = ""
+    userinput.value = ""
+    result.innerText = ""
+    Warning.style.opacity = "1"
 }
 reset.addEventListener("click", ()=>{
     resetfun()
