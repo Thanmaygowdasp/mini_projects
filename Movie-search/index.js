@@ -1,5 +1,3 @@
-
-
 async function searchmovie() {
     const query = document.getElementById("movieInput").value
 
