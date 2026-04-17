@@ -1,24 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Movie Search App</title>
-  <link rel="stylesheet" href="index.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Search</title>
+    <link rel="stylesheet" href="./index.css">
 </head>
 <body>
-
-  <h1>Movie Search App</h1>
-
-
-  <div class="search-box">
-    <input type="text" id="movieInput" placeholder="Enter movie name..." />
-    <button id="searchBtn" onclick="searchmovie()">Search</button>
-  </div>
-
-  <div id="loading" class="loading hidden">Loading...</div>
-
-  <div id="movies" class="movies-container"></div>
-
-  <script src="config.js"></script>
-  <script src="index.js"></script>
+    <div class="movie-search">
+        <div class="heading">
+            <div class="icon"><img src="./square-linkedin-brands-solid.png" alt=""></div>
+            <h1>Movie Rates</h1>
+            <div class="nav-link">
+                <a href="#" class="reture-home">Home</a>
+                <a href="#" class="reture-home">Return back</a>
+            </div>
+        </div>
+        <div class="searchingbar">
+            <input type="text" placeholder="Enter the movie name" id="search">
+            <button id="searchbtn">Search</button>
+            <div class="movie-card"></div>
+        </div>
+        <div class="homemovies"></div>
+    </div>
 </body>
 </html>

@@ -1,57 +1,75 @@
-body {
-  font-family: Arial, sans-serif;
-  background: #111;
-  color: white;
-  text-align: center;
-  padding: 20px;
+body{
+    min-height: 100vh;
+    background: #1e1717;
 }
-
-h1 {
-  margin-bottom: 20px;
+.heading{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
-
-.search-box {
-  margin-bottom: 20px;
+.icon{
+    display: flex;
+    gap: 10px;
+    align-items: center;
 }
-
-input {
-  padding: 10px;
-  width: 250px;
-  border-radius: 5px;
-  border: none;
+.icon img{
+    width: 55px;
+    height: 55px;
 }
-
-button {
-  padding: 10px 15px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+.heading h1{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    font-size: 48px;
+    color: white;
 }
-
-.movies-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+.nav-link{
+    display: flex;
+    gap: 35px;
+    margin: 50px;
+}
+.reture-home::before{
+    content: "";
+    position: absolute;
+    width: 0px;
+    top: 90px;
+    height: 10px;
+    background: white;
+    transition: all 0.3s ease-in-out;
+}
+.reture-home:hover::before{
+    width: 60px;
+}
+.reture-home{
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+}
+.searchingbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+#search{
+    width: 40%;
+    padding: 20px;
+    border-radius: 50px;
+    outline: none;
+    border: none;
+}
+#searchbtn{
+    width: 10%;
+    padding: 20px;
+    border-radius: 50px;
+    outline: none;
+    border: none;
+}
+.homemovies{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
-}
-
-.movie-card {
-  background: #222;
-  width: 200px;
-  border-radius: 8px;
-  padding: 10px;
-}
-
-.movie-card img {
-  width: 100%;
-  border-radius: 8px;
-}
-.loading {
-  font-size: 20px;
-  margin: 20px;
-  color: #fff;
-}
-
-.hidden {
-  display: none;
+  padding: 30px;
 }

@@ -1,4 +1,4 @@
-let sgpa_section = document.getElementById("sgpa-section")
+    let sgpa_section = document.getElementById("sgpa-section")
 let opensgpa = document.getElementById("opensgpa")
 let backhome = document.getElementById("backhome")
 let subjectinputs = document.getElementById("subjectInputs")
