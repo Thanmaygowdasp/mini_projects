@@ -11,10 +11,15 @@ body{
     display: flex;
     gap: 10px;
     align-items: center;
+    margin-left: 30px;
 }
 .icon img{
     width: 55px;
     height: 55px;
+    color: white;
+    background: white;
+    border-radius: 50px;
+    padding: 10px;
 }
 .heading h1{
     position: absolute;
@@ -72,4 +77,33 @@ body{
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
   padding: 30px;
+}
+.movie-review-card{
+  background: rgba(255,255,255,0.08);
+  border-radius: 12px;
+  padding: 15px;
+  backdrop-filter: blur(8px);
+  transition: 0.3s;
+  text-align: center;
+}
+.movie-review-card:hover{
+  transform: scale(1.05);
+}
+
+.movie-review-card img{
+  width: 100%;
+  border-radius: 10px;
+  height: 260px;
+  object-fit: cover;
+}
+
+.movie-review-card h3{
+  margin: 10px 0 5px;
+  color: white;
+}
+
+.movie-review-card p{
+  font-size: 14px;
+  opacity: 0.8;
+  color: white;
 }
