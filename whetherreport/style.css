@@ -1,0 +1,33 @@
+body{
+    background-color: rgb(186, 255, 255);
+}
+#Cityname{
+    display: inline;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10%;
+    margin-top: 25px;
+    padding: 10px;
+    width: 50%;
+    outline: none;
+    border: none;
+    border-radius: 50px;
+}
+#whetherbtn{
+    display: inline;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: 25%;
+    margin-left: 10px;
+    outline: none;
+    border: 1px solid black;
+    border-radius: 50px;
+    background-color: white;
+}
+#city{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
