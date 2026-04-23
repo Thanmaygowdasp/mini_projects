@@ -25,9 +25,3 @@ body{
     border-radius: 50px;
     background-color: white;
 }
-#city{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-}
