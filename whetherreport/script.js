@@ -6,15 +6,9 @@ const loading = document.getElementById("loading")
 const icons = document.getElementById("icon")
 const forecast = document.getElementById("forecast")
 
-async function getwhether() {
-    const city = document.getElementById("Cityname").value
+async function getwhether(lat,lon) {
 
     loading.innerHTML = "Loading"
-    const geourl = `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${apikey}`
-    const georesponse = await fetch(geourl)
-    const geodata = await georesponse.json()
-    let lat = geodata[0].lat
-    let lon = geodata[0].lon
     const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apikey}`
     const response = await fetch(url)
     const data = await response.json()
@@ -54,3 +48,36 @@ async function getwhether() {
     }
 }
 
+async function getwhethermaual() {
+    const city = document.getElementById("Cityname").value
+    const geourl = `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${apikey}`
+    const georesponse = await fetch(geourl)
+    const geodata = await georesponse.json()
+    if (geodata.length === 0) {
+        alert("City not found")
+        return
+    }
+    let lat = geodata[0].lat
+    let lon = geodata[0].lon
+    getwhether(lat,lon)
+
+}
+
+function detectuser(){
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+            (position) => {
+                const lat = position.coords.latitude;
+                const lon = position.coords.longitude;
+                getwhether(lat,lon)
+
+                
+            },
+            () => alert("Location permission denied")
+        );
+    } else {
+        alert("Geolocation not supported");
+    }
+}
+document.getElementById("myLocationBtn")
+        .addEventListener("click", detectuser);
