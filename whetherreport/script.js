@@ -23,9 +23,9 @@ async function getwhether(lat,lon) {
         humidity.innerHTML = ""
         return
     }
-    cityname.innerHTML = data.name
-    temp.innerHTML = data.main.temp + " °C"
-    humidity.innerHTML = data.main.humidity + " %"
+    cityname.innerHTML = "City Name :" + data.name
+    temp.innerHTML = "Temperature :" + data.main.temp + " °C"
+    humidity.innerHTML = "Humidity :" + data.main.humidity + " %"
     const iconcode = data.weather[0].icon
     icons.src = `https://openweathermap.org/img/wn/${iconcode}@2x.png`
 
@@ -41,7 +41,7 @@ async function getwhether(lat,lon) {
         <div class="day">
             <p>${date}</p>
             <img src="https://openweathermap.org/img/wn/${icon}@2x.png">
-            <p>${temp} °C</p>
+            <p>  ${temp} °C</p>
         </div>
         `
 
@@ -50,7 +50,7 @@ async function getwhether(lat,lon) {
 
 async function getwhethermaual() {
     const city = document.getElementById("Cityname").value
-    const geourl = `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${apikey}`
+    const geourl = `https://api.openweathermap.org/geo/1.0/direct?q=${city},IN&limit=1&appid=${apikey}`
     const georesponse = await fetch(geourl)
     const geodata = await georesponse.json()
     if (geodata.length === 0) {

@@ -1,3 +1,68 @@
 body{
     background-color: rgb(186, 255, 255);
 }
+.buttons{
+    display: flex;
+    gap: 25px;
+    width: 100%;
+    justify-content: center;
+    position: fixed;
+    margin-top: 35px;
+}
+#myLocationBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+    padding: 10px;
+    outline: none;
+    border: none;
+    background: black;
+    color: white;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+}
+#myLocationBtn:hover{
+    transform: scale(1.1);
+}
+#Cityname{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    padding: 10px;
+    border-radius: 25px;
+    border: 1px solid rgb(80, 78, 78);
+}
+#whetherbtn{
+    width: 5%;
+    padding: 10px;
+    outline: none;
+    border: none;
+    background: black;
+    color: white;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+}
+#whetherbtn:hover{
+    transform: scale(1.1);
+}
+.todays{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;   
+    gap: 15px;
+}
+#city{
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#forecast{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+}
