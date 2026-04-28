@@ -1,15 +1,16 @@
-body{
+body {
     background-color: rgb(186, 255, 255);
 }
-.buttons{
+
+.buttons {
     display: flex;
     gap: 25px;
     width: 100%;
     justify-content: center;
-    position: fixed;
     margin-top: 35px;
 }
-#myLocationBtn{
+
+#myLocationBtn {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,10 +23,12 @@ body{
     border-radius: 50px;
     transition: all 0.3s ease-in-out;
 }
-#myLocationBtn:hover{
+
+#myLocationBtn:hover {
     transform: scale(1.1);
 }
-#Cityname{
+
+#Cityname {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -34,7 +37,8 @@ body{
     border-radius: 25px;
     border: 1px solid rgb(80, 78, 78);
 }
-#whetherbtn{
+
+#whetherbtn {
     width: 5%;
     padding: 10px;
     outline: none;
@@ -44,25 +48,86 @@ body{
     border-radius: 50px;
     transition: all 0.3s ease-in-out;
 }
-#whetherbtn:hover{
+
+#whetherbtn:hover {
     transform: scale(1.1);
 }
-.todays{
+
+.todays {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;   
+    align-items: center;
     gap: 15px;
 }
-#city{
+
+#city {
     margin-top: 10%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-#forecast{
+
+#forecast {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 70px;
+    gap: 30px;
+}
+
+@media (max-width: 600px) {
+    .buttons {
+        display: flex;
+        gap: 25px;
+        width: 100%;
+        justify-content: center;
+        margin-top: 35px;
+    }
+
+    #myLocationBtn {
+        width: 80%;
+
+    }
+
+    #Cityname {
+        width: 80%;
+    }
+
+    #whetherbtn {
+        width: 40%;
+    }
+
+    #whetherbtn:focus .todays {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    #city {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .show-line::before {
+        content: "";
+        display: block;
+        border-top: 1px solid black;
+        margin-bottom: 15px;
+        width: 100%;
+    }
+
+    #forecast {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .day {
+        width: 30%;
+    }
 }

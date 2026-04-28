@@ -28,6 +28,7 @@ async function getwhether(lat,lon) {
     humidity.innerHTML = "Humidity :" + data.main.humidity + " %"
     const iconcode = data.weather[0].icon
     icons.src = `https://openweathermap.org/img/wn/${iconcode}@2x.png`
+    forecast.classList.add("show-line");
 
     forecast.innerHTML = ""
     for (let i = 0; i < foredata.list.length; i += 8) {
@@ -44,6 +45,7 @@ async function getwhether(lat,lon) {
             <p>  ${temp} °C</p>
         </div>
         `
+        forecast.classList.add("show-line");
 
     }
 }
