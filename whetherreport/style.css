@@ -74,6 +74,13 @@ body {
     align-items: center;
     gap: 30px;
 }
+.rain { background: black; color: white; }
+.clouds { background: gray; color: white; }
+.hot { background: red; color: white; }
+.cold { background: #3498db; color: white; }
+.storm { background: purple; color: white; }
+.mist { background: lightgray; color: black; }
+.normal { background: white; color: black; }
 
 @media (max-width: 600px) {
     .buttons {

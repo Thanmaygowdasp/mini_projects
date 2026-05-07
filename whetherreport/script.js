@@ -26,6 +26,7 @@ async function getwhether(lat,lon) {
     cityname.innerHTML = "City Name :" + data.name
     temp.innerHTML = "Temperature :" + data.main.temp + " °C"
     humidity.innerHTML = "Humidity :" + data.main.humidity + " %"
+    let condition = data.weather[0].main
     const iconcode = data.weather[0].icon
     icons.src = `https://openweathermap.org/img/wn/${iconcode}@2x.png`
     forecast.classList.add("show-line");
@@ -48,6 +49,7 @@ async function getwhether(lat,lon) {
         forecast.classList.add("show-line");
 
     }
+    backgroundchanger(condition)
 }
 
 async function getwhethermaual() {
@@ -83,3 +85,39 @@ function detectuser(){
 }
 document.getElementById("myLocationBtn")
         .addEventListener("click", detectuser);
+
+function backgroundchanger(condition){
+    let body = document.getElementById("bg")
+
+    body.className = ""
+    switch(condition){
+         case "Rain":
+        case "Drizzle":
+                body.classList.add("rain");
+                break;
+
+    case "Clouds":
+        body.classList.add("clouds");
+        break;
+
+    case "Clear":
+        body.classList.add("hot");
+        break;
+
+    case "Snow":
+        body.classList.add("cold");
+        break;
+
+    case "Thunderstorm":
+        body.classList.add("storm");
+        break;
+
+    case "Mist":
+    case "Haze":
+        body.classList.add("mist");
+        break;
+
+    default:
+        body.classList.add("normal");
+    }
+}
