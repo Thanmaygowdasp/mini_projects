@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <div class="habittracker">
+    <div id="habittracker">
         <div class="topsection">
         <div class="heading">Habit Tracker</div>
         <div class="score">🏃‍♀️</div>
@@ -16,13 +16,16 @@
             <button id="habitadder">Add</button>
             <div id="infogather" class="inforgather">
                 <div class="field">
-                <input type="text" required>
+                <input type="text" required id="habitname">
                 <label>Habit Name</label>
                 </div>
-                <input type="text" required>
-                <label>Name</label>
-                <button>Add</button>
+                <div class="field">
+                <input type="text" required id="reason">
+                <label>Reason</label>
+                </div>
+                <button id="habitsaver">Add</button>
             </div>
+            <div id="habitlist"></div>
         </div>
     </div>
     <script src="./script.js"></script>
